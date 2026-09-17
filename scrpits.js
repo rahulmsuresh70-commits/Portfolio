@@ -12,33 +12,18 @@
     const loader =
         document.getElementById("loader");
 
-
     if (!loader) {
         return;
     }
 
-
     function hideLoader() {
 
-        loader.style.pointerEvents =
-            "none";
+        loader.style.pointerEvents = "none";
 
-        loader.style.opacity =
-            "0";
+        loader.style.opacity = "0";
 
-        loader.style.visibility =
-            "hidden";
-
+        loader.style.visibility = "hidden";
     }
-
-
-    /*
-        CSS handles the RAHUL MS
-        letter-by-letter animation.
-
-        JavaScript only removes
-        the loading screen.
-    */
 
     setTimeout(
         hideLoader,
@@ -67,12 +52,10 @@ document.addEventListener(
                 "menuButton"
             );
 
-
         const navMenu =
             document.getElementById(
                 "navMenu"
             );
-
 
         if (
             menuButton &&
@@ -102,7 +85,6 @@ document.addEventListener(
             document.querySelectorAll(
                 ".nav-link"
             );
-
 
         navLinks.forEach(
             function (link) {
@@ -147,41 +129,27 @@ document.addEventListener(
                                     "href"
                                 );
 
-
                             if (
                                 !id ||
                                 id === "#"
                             ) {
-
                                 return;
-
                             }
-
 
                             const target =
                                 document.querySelector(
                                     id
                                 );
 
-
                             if (!target) {
-
                                 return;
-
                             }
-
 
                             event.preventDefault();
 
-
                             target.scrollIntoView({
-
-                                behavior:
-                                    "smooth",
-
-                                block:
-                                    "start"
-
+                                behavior: "smooth",
+                                block: "start"
                             });
 
                         }
@@ -201,7 +169,6 @@ document.addEventListener(
                 "img"
             );
 
-
         images.forEach(
             function (image) {
 
@@ -212,7 +179,6 @@ document.addEventListener(
                         const parent =
                             image.parentElement;
 
-
                         if (parent) {
 
                             parent.classList.add(
@@ -220,7 +186,6 @@ document.addEventListener(
                             );
 
                         }
-
 
                         if (
                             !image.classList.contains(
@@ -249,7 +214,6 @@ document.addEventListener(
             document.querySelectorAll(
                 ".reveal"
             );
-
 
         if (
             "IntersectionObserver"
@@ -289,7 +253,6 @@ document.addEventListener(
 
                 );
 
-
             revealElements.forEach(
                 function (element) {
 
@@ -299,7 +262,6 @@ document.addEventListener(
 
                 }
             );
-
 
         } else {
 
@@ -314,6 +276,20 @@ document.addEventListener(
             );
 
         }
+
+
+
+        /* =================================================
+           CERTIFICATE
+
+           The certificate is displayed directly in the
+           Certificates section.
+
+           No popup.
+           No modal.
+           No certificate viewer.
+           No certificate button JavaScript.
+        ================================================= */
 
 
 
@@ -394,7 +370,8 @@ document.addEventListener(
                         rootMargin:
                             "-35% 0px -55% 0px",
 
-                        threshold: 0
+                        threshold:
+                            0
                     }
 
                 );
@@ -413,4 +390,5 @@ document.addEventListener(
         }
 
     }
+
 );
